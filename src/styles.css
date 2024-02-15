@@ -1,0 +1,495 @@
+
+body {
+    margin:0px;
+  }
+
+
+.page-container {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+ 
+}
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 150px;
+    gap: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    font-family: 'Karla';
+    font-size: 16;
+    font-weight: 800;
+}
+
+.navitem a:link, a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+
+
+.navitem a:hover {
+    color: #EE9972;
+}
+
+.main-footer {
+    background-color: white;
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-grow: 1;
+}
+
+
+.reserve {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1.5fr 1.5fr 3fr 2fr;
+    grid-template-rows: repeat(4, auto) 5rem;
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    padding: 3rem;
+    background-color: #495E57;
+}
+
+
+.reserve-image img {
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.reserve-image {
+    grid-column: 4/6;
+    grid-row: 1/6;
+}
+
+
+.reserve-heading1 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.reserve-heading1 h1 {
+    color: #F4CE14;
+    font-family: "Markazi Text";
+    font-size: 64px;
+    font-weight: 500;
+}
+
+
+.reserve-heading3 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+
+}
+
+.reserve-heading3 h3 {
+    color: white;
+    font-family: "Markazi Text";
+    font-size: 40px;
+    font-weight: 400;
+}
+
+
+.reserve-description {
+    color: white;
+    font-family: "Karla";
+    font-size: 18px;
+    font-weight: 500;
+    grid-column: 2/4;
+    grid-row: 3/4;
+    margin: 1em 0em;
+}
+
+
+
+#reserve-button {
+    display: flex;
+    grid-column: 2/4;
+    grid-row: 4/5;
+    justify-content: flex-start;
+}
+
+.button {
+    border: none;
+    background-color: #F4CE14;
+    text-align: center;
+    padding: 1em 2em;
+    margin: 1em 0em;
+    border-radius: 16px;
+    text-transform: uppercase;
+    font-family: "Karla";
+    font-size: 20px;
+    font-weight: 800;
+    height: min-content;
+}
+
+.button:hover {
+    background-color: #EE9972;
+}
+
+
+.specials {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr 3fr 2fr;
+    grid-template-rows: 1fr max-content min-content 2fr min-content;
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    padding: 3rem;
+}
+
+.specials img {
+    max-width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+
+.specials-heading {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.specials-heading h1 {
+    font-family: "Markazi Text";
+    font-size: 64px;
+    font-weight: medium;
+}
+
+#button {
+    grid-column: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.specials1 {
+    grid-column: 2/3;
+    grid-row: 2/7;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    background-color: #EDEFEE;
+    border-radius: 16px 16px 0 0;
+
+}
+
+.image {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    display: flex;
+    padding: 0.5em 1em;
+    font-family: "Karla";
+    font-weight: bold;
+    font-size: 18px;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.description {
+    padding: 0 1em;
+    font-family: "Karla";
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
+
+.delivery {
+    font-weight: bold;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.delivery img {
+    margin: 0.5em;
+}
+
+
+.specials2 {
+    grid-column: 3/4;
+    grid-row: 2/7;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    background-color: #EDEFEE;
+    border-radius: 16px 16px 0 0;
+}
+
+
+.specials3 {
+    grid-column: 4/5;
+    grid-row: 2/7;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    background-color: #EDEFEE;
+    border-radius: 16px 16px 0 0;
+}
+
+
+
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 2fr 2.25fr 2.25fr 2.25fr 2.25fr 2fr;
+    grid-template-rows: 1fr min-content max-content min-content;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    padding: 3rem 3rem 4rem;
+    background-color:#495E57;
+}
+
+
+.testimonials-heading {
+    grid-column: 3/5;
+    grid-row: 1/2;
+    display: grid;
+    justify-content: center;
+    padding: 2em 2em 3em;
+}
+
+.testimonials-heading h1 {
+    color: #F4CE14;
+    font-family: "Markazi Text";
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.testimonial1 {
+    grid-column: 2/3;
+    grid-row: 2/5;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    background-color: #EDEFEE;
+    border-radius: 16px;
+}
+
+
+.testimonial2 {
+    grid-column: 3/4;
+    grid-row: 2/5;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    background-color: #EDEFEE;
+    border-radius: 16px;
+}
+
+
+.testimonial3 {
+    grid-column: 4/5;
+    grid-row: 2/5;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    background-color: #EDEFEE;
+    border-radius: 16px;
+}
+
+
+.testimonial4 {
+    grid-column: 5/6;
+    grid-row: 2/5;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    background-color: #EDEFEE;
+    border-radius: 16px;
+}
+
+
+.rating {
+    display: flex;
+    padding: 0.5em 1em;
+    font-family: "Karla";
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.review {
+    display: flex;
+    padding: 0.5em 1em;
+    font-family: "Karla";
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.card {
+    display: flex;
+    padding: 0.5em 1em;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #EDEFEE;
+    border:none;
+}
+
+.name {
+    padding: 0.5em;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.restaurant {
+    background-color: #EDEFEE;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1.5fr 1.5fr 1.5fr 3fr 2fr;
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    padding: 3rem 3rem 5rem;
+}
+
+.restaurant-heading1 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.restaurant-heading1 h1 {
+    font-family: "Markazi Text";
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.restaurant-heading3 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.restaurant-heading3 h3 {
+    font-family: "Markazi Text";
+    font-size: 40px;
+    font-weight: 400;
+}
+
+
+.restaurant-description {
+    grid-column: 2/4;
+    grid-row: 3/4;
+    font-family: "Karla";
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+
+.restaurant-image1 {
+    grid-column: 4/6;
+    grid-row: 2/5;
+   
+}
+
+
+.restaurant-image2 {
+    grid-column: 6/7;
+    grid-row: 1/4;
+    
+}
+
+.restaurant img {
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.footer-container a {
+    text-decoration: none;
+}
+
+.foooter-container a:link, a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    color: #EE9972;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    font-family: "Karla";
+    font-size: 16px;
+    font-weight:500;
+    padding: 3rem;
+    flex-wrap: wrap;
+}
+
+
+.footer-column {
+    text-align: center;
+    margin: 0.5em;
+    padding: 1em;
+    min-width: 12.5rem;
+}
+
+
+.footer-column:nth-of-type(2) {
+    text-align: start;
+}
+
+
+.footer-heading {
+    font-family: 'Karla';
+    font-size: 16;
+    font-weight: 800;
+    margin-bottom: 1em;
+}
+
+footer .fa-brands, .fa-solid {
+    font-size: 1.5rem;
+}
+
+.footer-column:nth-of-type(5) ul {
+    display: flex;
+    justify-content: space-around;
+}

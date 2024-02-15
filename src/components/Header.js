@@ -1,9 +1,14 @@
-import logo from '../images/Logo.png'
-
+import logo from '../images/Logo.png';
+import Nav from './Nav';
 function Header () {
     return (
         <header>
-            <img src={logo}></img>
+            <div>
+                <a href="/home">
+                <img src={logo}></img>
+                </a>
+            </div>
+            <Nav></Nav>
         </header>
     )
 }

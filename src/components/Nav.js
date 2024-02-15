@@ -10,17 +10,15 @@ import Login from './Login';
 
 function Nav () {
     return (
-        <div >
-        <nav>
-            <ul>
-                <li><Link to="/home">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/menu">Menu</Link></li>
-                <li><Link to="/reservations">Reservations</Link></li>
-                <li><Link to="/order">Order online</Link></li>
-                <li><Link to="/login">Login</Link></li>
+        <nav className="navbar">
+            <ul classNme="navlinks">
+                <li className="navitem"><Link to="/home">Home</Link></li>
+                <li className="navitem"><Link to="/about">About</Link></li>
+                <li className="navitem"><Link to="/menu">Menu</Link></li>
+                <li className='navitem'><Link to="/reservations">Reservations</Link></li>
+                <li className='navitem'><Link to="/order">Order online</Link></li>
+                <li className='navitem'><Link to="/login">Login</Link></li>
             </ul>
-        </nav>
        <Routes>
         <Route path="/home" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
@@ -29,7 +27,7 @@ function Nav () {
         <Route path="/order" element={<Order/>}/>
         <Route path="/login" element={<Login/>}/>
        </Routes>
-        </div>
+        </nav>
     )
 }
 export default Nav;

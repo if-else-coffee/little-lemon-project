@@ -3,12 +3,14 @@ import React from 'react';
 
 function Footer () {
     return (
-        <div className="main-footer">
-            <div className="container">
-            <div className="row">
-                {/*column1*/}
-                <div className="col">
-                    <h4>About us</h4>
+            <footer>
+            <div className="footer-container">
+                <div className="footer-column">
+                    <a href="/home">
+                    <img src="/Logo.png"></img>
+                    </a>
+                </div>
+                <div className="footer-column">
                     <ul className="list-unstyled">
                         <li><a href="/home">Home</a></li>
                         <li><a href="/about">About</a></li>
@@ -18,9 +20,8 @@ function Footer () {
                         <li><a href="/login">Login</a></li>
                     </ul>
                 </div>
-                {/*column2*/}
-                <div className="col">
-                    <h4>Contact us:</h4>
+                <div className="footer-column">
+                    <h6 className="footer-heading">Contact us:</h6>
                     <ul className="list-unstyled">
                         <li>Address: 4601 Lincoln Ave,</li>
                         <li>Chikago, IL</li>
@@ -29,27 +30,24 @@ function Footer () {
                         <li>littlelemon@gmail.com</li>
                     </ul>
                 </div>
-                {/*column3*/}
-                <div className="col">
-                    <h4>Hours:</h4>
+                <div className="footer-column">
+                    <h6 className="footer-heading">Hours:</h6>
                     <ul className="list-unstyled">
                         <li>Mon-Thurs: 12-10 pm</li>
                         <li>Fri-Sat: 12pm-12am</li>
                         <li>Sun: 12-10 pm</li>
                     </ul>
                 </div>
-                {/*column4*/}
-                <div className="col">
-                    <h4>Social media links:</h4>
+                <div className="footer-column">
+                    <h6 className="footer-heading">Social media links:</h6>
                     <ul className="list-unstyled">
-                        <li>Facebook</li>
-                        <li>Instagram</li>
-                        <li>X</li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-x"></i></a></li>
                     </ul>
                 </div>
             </div>
-            </div>
-        </div>
+            </footer>
     )
 }
 export default Footer;
