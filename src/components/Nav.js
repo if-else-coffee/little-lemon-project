@@ -19,14 +19,6 @@ function Nav () {
                 <li className='navitem'><Link to="/order">Order online</Link></li>
                 <li className='navitem'><Link to="/login">Login</Link></li>
             </ul>
-       <Routes>
-        <Route path="/home" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/menu" element={<Menu/>}/>
-        <Route path="/reservations" element={<Reservations/>}/>
-        <Route path="/order" element={<Order/>}/>
-        <Route path="/login" element={<Login/>}/>
-       </Routes>
         </nav>
     )
 }

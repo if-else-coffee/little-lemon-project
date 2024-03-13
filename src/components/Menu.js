@@ -3,7 +3,7 @@ function Menu () {
     return (
         <div>
             <h3>Menu</h3>
-            <div>This is our menu</div>
+            <div>This webpage contains our menu</div>
         </div>
     )
 }

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Reserve () {
     return (
         < div className="reserve">
@@ -11,7 +13,7 @@ function Reserve () {
                 We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist
             </div>
             <div id="reserve-button">
-                <button className="button">Reserve a table</button>
+                <button className="button"><Link to="/reservations">Reserve a table</Link></button>
             </div>
             <div className="reserve-image">
                 <img src="/restaurantfood.jpg"></img>
