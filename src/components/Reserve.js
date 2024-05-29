@@ -12,7 +12,7 @@ function Reserve () {
             <div className="reserve-description">
                 We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist
             </div>
-            <div id="reserve-button">
+            <div id="reserve-button1">
                 <button className="button"><Link to="/reservations">Reserve a table</Link></button>
             </div>
             <div className="reserve-image">

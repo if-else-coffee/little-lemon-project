@@ -41,9 +41,9 @@ function Footer () {
                 <div className="footer-column">
                     <h6 className="footer-heading">Social media links:</h6>
                     <ul className="list-unstyled">
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-x"></i></a></li>
+                        <li><a href="#"><i className="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i className="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="#"><i className="fa-solid fa-x"></i></a></li>
                     </ul>
                 </div>
             </div>

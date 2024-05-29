@@ -124,7 +124,7 @@ header {
 
 
 
-#reserve-button {
+#reserve-button1 {
     display: flex;
     grid-column: 2/4;
     grid-row: 4/5;
@@ -143,6 +143,11 @@ header {
     font-size: 20px;
     font-weight: 800;
     height: min-content;
+
+}
+
+.button a:link, a:visited {
+    text-decoration: none;
 }
 
 .button:hover {
@@ -492,4 +497,240 @@ footer .fa-brands, .fa-solid {
 .footer-column:nth-of-type(5) ul {
     display: flex;
     justify-content: space-around;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+
+
+.backButton button {
+    color:#495E57;
+    font-size: 2em;
+    width: 3rem;
+    border: none;
+    background-color: white;
+    padding: 2rem 23rem;
+}
+
+
+.backButton button:hover {
+    color:#EE9972;
+}
+
+
+.banner img {
+    width: 100%;
+}
+
+.stepOne {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+
+.stepOneHeading {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color:#495E57;
+    font-family: "Markazi Text";
+    font-size: 64px;
+    font-weight: 500;
+    padding: 3rem;
+}
+
+.steps {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    background-color: #EDEFEE;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    column-gap: 5rem;
+
+}
+
+.steps h5 {
+    font-family: "Karla";
+    font-size: 18px;
+}
+
+.stepOneReserve {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stepOneReserve h5 {
+    font-family: "Karla";
+    font-size: 18px;
+    font-weight: 800;
+    color:#EE9972;
+    text-decoration: underline;
+}
+
+
+.stepOneDetails {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.stepOneDetails h5 {
+    font-family: "Karla";
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+
+.reservationForm {
+    background-color: #495E57;
+    color: white;
+    font-family: "Karla";
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    grid-template-rows: repeat(4, min-content);
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    padding: 3rem;
+}
+
+.field1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.icon {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 1rem;
+    padding-bottom: 1rem;
+    color: #F4CE14;
+    font-size: 2em;
+    width: 3rem;
+
+}
+
+.data {
+    margin: 1rem;
+
+}
+
+
+label {
+    padding: 1rem 1rem 1rem 0;
+}
+
+
+select, input, textarea {
+    border-radius: 16px;
+    padding: 0.7rem;
+    border-color: black;
+    box-shadow: 1px 1px 4px #333333;
+    background-color:#EDEFEE;
+    width: 15rem;
+}
+
+
+.field2{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+
+.field3 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+
+.field4 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+
+.field5 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .form {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, min-content);
+      padding: 0.5rem;
+      column-gap: 2rem;
+      row-gap: 0.5rem;
+
+    }
+    .field1 {
+        grid-column: 1;
+        grid-row: 1/2;
+    }
+    .field2 {
+        grid-column: 1;
+        grid-row: 2/3;
+    }
+    .field3 {
+        grid-column: 1;
+        grid-row: 3/4;
+    }
+
+    .field4 {
+        grid-column: 1;
+        grid-row: 4/5;
+    }
+    .field5 {
+        grid-column: 1;
+        grid-row: 5/6;
+    }
+  }
+
+#reserve-button2 {
+    display: flex;
+    justify-content: center;
+    background-color:#EDEFEE;
+    padding: 3rem;
+}
+
+.pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #495E57;
+    background-color: #EDEFEE;
 }

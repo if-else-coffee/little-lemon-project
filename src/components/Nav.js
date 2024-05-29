@@ -11,7 +11,7 @@ import Login from './Login';
 function Nav () {
     return (
         <nav className="navbar">
-            <ul classNme="navlinks">
+            <ul className="navlinks">
                 <li className="navitem"><Link to="/home">Home</Link></li>
                 <li className="navitem"><Link to="/about">About</Link></li>
                 <li className="navitem"><Link to="/menu">Menu</Link></li>

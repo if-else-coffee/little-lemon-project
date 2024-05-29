@@ -1,9 +1,18 @@
 import React from 'react';
-function Reservations () {
+import ReservationForm from './ReservationForm';
+import BackButton from './BackButton';
+import ReservationBanner from './ReservationBanner';
+import StepOne from './StepOne';
+import TableBanner from './TableBanner';
+
+function Reservations ({availableTimes, setAvailableTimes}) {
     return (
         <div>
-            <h3>Reservations</h3>
-            <div>You can make your reservation here</div>
+            <BackButton/>
+            <ReservationBanner/>
+            <StepOne/>
+            <ReservationForm availableTimes={availableTimes} setAvailableTimes={setAvailableTimes}/>
+            <TableBanner/>
         </div>
     )
 }
