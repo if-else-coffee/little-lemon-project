@@ -7,28 +7,28 @@ import Order from './Order';
 import Login from './Login';
 import { useReducer } from 'react';
 
+export const times = [
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00"
+]
+
+export function initializeTimes () {
+    return times
+}
+
+export function updateTimes (state, action) {
+    if (action.type === "update_times") {
+        console.log(state, action)
+        return () => state().filter(e => e !== action.value);
+    }
+    return state;
+}
+
 function Main () {
-
-    var times = [
-        "17:00",
-        "18:00",
-        "19:00",
-        "20:00",
-        "21:00",
-        "22:00"
-    ]
-
-    function initializeTimes () {
-        return times
-    }
-
-    function updateTimes (state, action) {
-        if (action.type === "update_times") {
-            console.log(state, action)
-            return () => state().filter(e => e !== action.value);
-        }
-            return state;
-    }
 
     const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
 
