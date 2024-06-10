@@ -524,7 +524,7 @@ footer .fa-brands, .fa-solid {
     width: 100%;
 }
 
-.stepOne {
+.step {
     display: grid;
     grid-template-columns: repeat(4, 3fr);
     grid-template-rows: repeat(2, 1fr);
@@ -532,7 +532,7 @@ footer .fa-brands, .fa-solid {
 }
 
 
-.stepOneHeading {
+.stepHeading {
     grid-column: 1/5;
     grid-row: 1/2;
     display: flex;
@@ -544,6 +544,9 @@ footer .fa-brands, .fa-solid {
     font-weight: 500;
     padding: 3rem;
 }
+
+
+
 
 .steps {
     grid-column: 1/5;
@@ -566,6 +569,17 @@ footer .fa-brands, .fa-solid {
     justify-content: flex-end;
 }
 
+.stepTwoReserve {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stepTwoReserve h5 {
+    font-family: "Karla";
+    font-size: 18px;
+    font-weight: 700;
+}
+
 .stepOneReserve h5 {
     font-family: "Karla";
     font-size: 18px;
@@ -586,7 +600,18 @@ footer .fa-brands, .fa-solid {
     font-weight: 700;
 }
 
+.stepTwoDetails {
+    display: flex;
+    justify-content: flex-start;
+}
 
+.stepTwoDetails h5 {
+    font-family: "Karla";
+    font-size: 18px;
+    font-weight: 800;
+    color:#EE9972;
+    text-decoration: underline;
+}
 
 .reservationForm {
     background-color: #495E57;
@@ -733,4 +758,114 @@ select, input, textarea {
     align-items: center;
     color: #495E57;
     background-color: #EDEFEE;
+}
+
+.confirmation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem;
+}
+
+.confirmation-heading {
+    background-color: white;
+    color:#495E57;
+    font-family: "Markazi Text";
+    font-size: 64px;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.confirmation-description {
+    padding: 1rem;
+}
+.confirmation-description h5 {
+    font-family: "Karla";
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.confirmation-address {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirmation-address h5 {
+    font-family: "Karla";
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.gallery {
+    background-color: #495E57;
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr 3fr 2fr;
+    grid-template-rows: min-content 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding: 3rem;
+}
+
+.gallery-heading {
+    grid-column: 2/5;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-heading h1 {
+    color: #F4CE14;
+    font-family: "Markazi Text";
+    font-size: 64px;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+
+.gallery1 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    aspect-ratio: 1/1;
+
+}
+
+.gallery img {
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery2 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    aspect-ratio: 1/1;
+}
+
+.gallery3 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    aspect-ratio: 1/1;
+}
+
+.gallery4 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    aspect-ratio: 1/1;
+}
+
+.gallery5 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    aspect-ratio: 1/1;
+}
+
+.gallery6 {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    aspect-ratio: 1/1;
 }

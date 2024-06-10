@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {faUserGroup, faCalendarDays, faChampagneGlasses, faPenToSquare, faClock} from '@fortawesome/free-solid-svg-icons';
 
-function ReservationForm ({availableTimes = [], setAvailableTimes}) {
+function ReservationForm ({availableTimes = [], setAvailableTimes, submitForm}) {
 
     const [formData, setFormData] = useState({guests: "1 person", date: "", time: "17:00", occasion: "Birthday", request: " "});
 
@@ -13,6 +15,9 @@ function ReservationForm ({availableTimes = [], setAvailableTimes}) {
         if (name === 'time') {
             setAvailableTimes({type: "update_times", value: value})
         }
+        if (name === 'date') {
+            setAvailableTimes({type: "update_date", value: value})
+        }
     };
 
     const handleSubmit = (event) => {
@@ -20,7 +25,9 @@ function ReservationForm ({availableTimes = [], setAvailableTimes}) {
         console.log("Form submitted");
         console.log(formData);
         setFormData({guests: "1 person", date: "", time: "17:00", occasion: "Birthday", request: " "})
+        submitForm(formData)
     }
+
 
     return (
         <div className="reservationForm">

@@ -1,19 +1,19 @@
 import React from 'react';
-function StepOne () {
+function StepTwo () {
     return (
         <div className="step">
             <div className="stepHeading">
-                <h1>Reserve a table</h1>
+                <h1>Confirmation of reservation</h1>
            </div>
            <div className="steps">
-            <div className="stepOneReserve">
+            <div className="stepTwoReserve">
                 <h5>1. Reserve a table</h5>
            </div>
-           <div className="stepOneDetails">
+           <div className="stepTwoDetails">
                 <h5>2. Confirmation of reservation</h5>
            </div>
            </div>
         </div>
     )
 }
-export default StepOne;
+export default StepTwo;
