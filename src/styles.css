@@ -455,6 +455,11 @@ header {
     text-decoration: none;
 }
 
+.list-unstyled li {
+    color: #333333;
+    text-decoration: none;
+}
+
 .footer-container a:hover {
     color: #EE9972;
 }
@@ -868,4 +873,39 @@ select, input, textarea {
     grid-column: 4/5;
     grid-row: 3/4;
     aspect-ratio: 1/1;
+}
+
+input:focus:invalid {
+    border: 5px; 
+    color: red;
+    background-color: #ffdddd;
+}
+
+select:focus:invalid {
+    border: 3px; 
+    color: red;
+    background-color: #ffdddd;
+}
+
+textarea:focus:invalid {
+    border: 3px;
+    color: red;
+    background-color: #ffdddd;
+}
+
+.validation-error-message {
+    color: red;
+}
+
+.fieldError p {
+    color: red;
+    font-family: "Karla";
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+input:hover, textarea:hover, select:hover {
+    border-color: transparent;
+    box-shadow: 0 0 0 5px #EE9972;
 }

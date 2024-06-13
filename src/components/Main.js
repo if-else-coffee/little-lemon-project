@@ -39,15 +39,6 @@ const submitAPI = function(formData) {
     return true;
 };
 
-export const times = [
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00"
-]
-
 export function initializeTimes () {
     const date = new Date();
     return fetchAPI(date)
@@ -55,10 +46,10 @@ export function initializeTimes () {
 
 export function updateTimes (state, action) {
     console.log(action)
-    if (action.type === "update_times") {
-        const date = new Date();
-        return () => state().filter(e => e !== action.value);
-    }
+    // if (action.type === "update_times") {
+    //     const date = new Date();
+    //     return () => state().filter(e => e !== action.value);
+    // }
     if (action.type === "update_date") {
         return () => fetchAPI(new Date(action.value))
     }
@@ -66,9 +57,10 @@ export function updateTimes (state, action) {
 }
 
 function Main () {
-    
+
+    const navigate = useNavigate();
+
     function submitForm(formData) {
-        const navigate = useNavigate();
         if (submitAPI(formData)) {
             navigate("/confirmation");
         }

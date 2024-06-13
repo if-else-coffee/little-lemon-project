@@ -7,7 +7,7 @@ function BackButton () {
     const navigate=useNavigate();
     return (
         <div className="backButton">
-            <button onClick={()=>navigate(-1)}>
+            <button aria-label="back button" onClick={()=>navigate(-1)}>
                 <FontAwesomeIcon icon={faCircleArrowLeft} />
             </button>
         </div>
