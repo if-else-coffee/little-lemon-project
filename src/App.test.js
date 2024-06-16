@@ -23,24 +23,29 @@ test ("calls initializeTimes function with argument", ()=> {
 
 test("testing validation for each required form field", () => {
   const handleSubmit = jest.fn();
-  render (<ReservationForm onSubmit={handleSubmit} availableTimes={initializeTimes} setAvailableTimes={updateTimes} submitForm={submitForm}/>);
+  const updateTimes = jest.fn();
+  render(<ReservationForm onSubmit={handleSubmit} availableTimes={initializeTimes} setAvailableTimes={updateTimes} submitForm={submitForm}/>);
 
   const selectGuests = screen.getByLabelText("Number of guests:");
-  fireEvent.change(selectGuests, {target: {value: "Select number of guests"}});
+  fireEvent.change(selectGuests, {target: {value: ""}});
 
   const selectDate = screen.getByLabelText("Date:");
   fireEvent.change(selectDate, {target: {value: ""}});
 
+  const selectTime = screen.getByLabelText("Time:");
+  fireEvent.change(selectTime, {target: {value: ""}});
+
   const selectOccasion = screen.getByLabelText("Select occasion:");
-  fireEvent.change(selectOccasion, {target: {value: "Select occasion"}});
+  fireEvent.change(selectOccasion, {target: {value: ""}});
 
   const submitButton = screen.getByRole("button");
   fireEvent.click(submitButton);
 
   const requestInput = screen.getByLabelText("Add special request (optional):");
-  fireEvent.change(requestInput, {target: {value: "3"}});
+  fireEvent.change(requestInput, {target: {value: ""}});
 
   expect(handleSubmit).not.toHaveBeenCalled();
+  expect(updateTimes).toHaveBeenCalled();
   expect(submitButton).toHaveAttribute("disabled");
 
 });

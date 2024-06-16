@@ -23,7 +23,7 @@ export function ReservationForm ({availableTimes = [], setAvailableTimes, submit
 
 
     const [formData, setFormData] = useState({guests: '', date: '', time: '', occasion: '', request: ''});
-    const [isChanged, setIsChanged] = useState(false);
+    const [formDataChanges, setIsChanged] = useState({guests: false, date: false, time: false, occasion: false, request: false});
 
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -34,7 +34,8 @@ export function ReservationForm ({availableTimes = [], setAvailableTimes, submit
         if (name === 'date') {
             setAvailableTimes({type: "update_date", value: value})
         }
-        setIsChanged(true)
+        formDataChanges[name] = true
+        setIsChanged(formDataChanges)
     };
 
     const handleSubmit = (event) => {
@@ -67,7 +68,7 @@ export function ReservationForm ({availableTimes = [], setAvailableTimes, submit
                                 <option value="9">9 people</option>
                                 <option value="10">For larger reservations contact us</option>
                             </select>
-                            <div className="fieldError"><ErrorMessage value={formData.guests} isChanged={isChanged}/></div>
+                            <div className="fieldError"><ErrorMessage value={formData.guests} isChanged={formDataChanges.guests}/></div>
                         </div>
                     </div>
                     <div className="field2">
@@ -77,7 +78,7 @@ export function ReservationForm ({availableTimes = [], setAvailableTimes, submit
                             <div>
                                 <input id="date" name="date" type="date" value={formData.date} onChange={handleChange} required/>
                             </div>
-                            <div className="fieldError"><ErrorMessage value={formData.date}/></div>
+                            <div className="fieldError"><ErrorMessage value={formData.date} isChanged={formDataChanges.date}/></div>
                         </div>
                     </div>
                     <div className="field3">
@@ -85,15 +86,15 @@ export function ReservationForm ({availableTimes = [], setAvailableTimes, submit
                             <div><label htmlFor='time'>Time:</label></div>
                             <div>
                             <select id="time" name="time" value={formData.time} onChange={handleChange} required>
-                                <option key="">Select time</option>
+                                <option value="">Select time</option>
                                 {
                                     availableTimes().map((item, i) => {
-                                        return (<option key={item}>{item}</option>)
+                                        return (<option value={item} key={i}>{item}</option>)
                                     })
                                 }
                             </select>
                             </div>
-                            <div className="fieldError"><ErrorMessage value={formData.time}/></div>
+                            <div className="fieldError"><ErrorMessage value={formData.time} isChanged={formDataChanges.time}/></div>
                         </div>
                         <div className="icon"><FontAwesomeIcon icon={faClock} /></div>
                     </div>
@@ -112,14 +113,14 @@ export function ReservationForm ({availableTimes = [], setAvailableTimes, submit
                             <option>Dinner with friends</option>
                             <option>Other occasion</option>
                             </select>
-                            <div className="fieldError"><ErrorMessage value={formData.occasion}/></div>
+                            <div className="fieldError"><ErrorMessage value={formData.occasion} isChanged={formDataChanges.occasion}/></div>
                         </div>
                     </div>
                     <div className="field5">
                         <div className="icon"><FontAwesomeIcon icon={faPenToSquare} fixedWidth/></div>
                         <div className="data">
                             <label htmlFor="request">Add special request (optional):</label>
-                            <textarea id="request" name="request" value={formData.request} rows="3" maxLength={200} minLength={10} onChange={handleChange}></textarea>
+                            <textarea id="request" name="request" value={formData.request} rows="3" maxLength={200} onChange={handleChange}></textarea>
                         </div>
                     </div>
                     </div>

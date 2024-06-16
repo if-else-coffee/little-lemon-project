@@ -46,10 +46,6 @@ export function initializeTimes () {
 
 export function updateTimes (state, action) {
     console.log(action)
-    // if (action.type === "update_times") {
-    //     const date = new Date();
-    //     return () => state().filter(e => e !== action.value);
-    // }
     if (action.type === "update_date") {
         return () => fetchAPI(new Date(action.value))
     }
